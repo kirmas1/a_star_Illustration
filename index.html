@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="mazeGame" layout="row" flex>
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4" md-is-locked-open="true">
+       
+        <md-toolbar class="md-primary md-hue-3">
+            <h1 class="md-toolbar-tools">Menu</h1>
+        </md-toolbar>
+
+        <md-content ng-controller="sideBarCtrl" flex layout="column" layout-margin>
+           <div layout="column" layout-margin>
+            <md-button ng-click="placeStartTile()" class="md-primary md-raised" ng-disabled="!gameButtonsEnable.start">
+                Start
+            </md-button>
+            <md-button ng-click="placeEndTile()" class="md-accent md-raised" ng-disabled="!gameButtonsEnable.end">
+                End
+            </md-button>
+            <md-button ng-click="go()" class="md-warn md-raised" ng-disabled="!gameButtonsEnable.go">
+                Go
+            </md-button>
+            </div>
+            <div flex layout="column" layout-align="end none" layout-margin>
+            <md-button ng-click="goToSettings()" class="md-primary md-hue-3 md-raised">
+                Settings
+            </md-button>
+            </div>
+        </md-content>
+        
+    </md-sidenav>
+
+    <div flex ui-view layout="column"></div>
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular-aria.min.js"></script>
+    <script type="text/javascript" src="lib/angular-messages.min.js"></script>
+    <!-- UI Router-->
+    <script type="text/javascript" src="lib/angular-ui-router.js"></script>
+    <!-- Angular Material Library -->
+    <script type="text/javascript" src="lib/angular-material.min.js"></script>
+    <!-- A* Algorithm-->
+    <script type="text/javascript" src="lib/astar.js"></script>
+    <!-- My Angular App-->
+    <script type="text/javascript" src="javascripts/app.js"></script>
+</body>
+
+</html>

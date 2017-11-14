@@ -1,0 +1,35 @@
+<md-content flex layout="column" layout-align="space-around center" layout-padding>
+
+    <form name="colorsForm">
+        <div layout-gt-sm="row">
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>A' Color</label>
+                <input required name="colorA" ng-model="colors.A" ng-pattern="hexColorRegex">
+                <div ng-messages="colorsForm.colorA.$error">
+                    <div ng-message="pattern">Must be a Hex Color. Starting with # sign</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>B' Color</label>
+                <input required name="colorB" ng-model="colors.B" ng-pattern="hexColorRegex">
+                <div ng-messages="colorsForm.colorB.$error">
+                    <div ng-message="pattern">Must be a Hex Color. Starting with # sign</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>C' Color</label>
+                <input required name="colorC" ng-model="colors.C" ng-pattern="hexColorRegex">
+                <div ng-messages="colorsForm.colorC.$error">
+                    <div ng-message="pattern">Must be a Hex Color. Starting with # sign</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-align="center center">
+            <md-button class="md-primary md-hue-3 md-raised" ng-click=save() type="submit">Save and Return</md-button>
+        </div>
+    </form>
+
+</md-content>

@@ -1,0 +1,9 @@
+<div flex layout="row" layout-align="center center">
+    <div class="grid-container">
+        <div ng-repeat="tile in board" class="tile" ng-style="tile.style" ng-click="toggleTile(tile)">
+            <div ng-show="tile.start" class="edge-tile-sign">Start</div>
+            <div ng-show="tile.end" class="edge-tile-sign">End</div>
+        </div>
+    </div>
+</div>
+

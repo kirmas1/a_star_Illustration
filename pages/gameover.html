@@ -1,0 +1,9 @@
+<div flex layout="row" layout-align="center center">
+<div layout="column" layout-align="center center" layout-margin>
+    Job ended successfully with {{result.steps}} Steps, at {{result.formattedDuration()}} minutes
+    <div class="btn-wrap" ng-style="backBtnWrapStyle" ng-click="startOver()" ng-mouseover="inverseBackBtn()" ng-mouseleave="restoreBackBtn()">
+        <img src="assets/vSign.png" class="btn-icon" ng-style="backBtnImgStyle"/>
+        <span class="btn-text">Start Over</span>
+    </div>
+</div>
+</div>

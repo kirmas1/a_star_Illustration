@@ -1,0 +1,50 @@
+        body {
+            margin: 0px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            width: calc(100vh / 3);
+            height: calc(100vh / 3);
+        }
+        .tile {
+            position: relative;
+            cursor: pointer;
+        }
+        .edge-tile-sign {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: x-small;
+        }
+        .btn-wrap {
+            cursor: pointer;
+            position: relative;
+            height: 29px;
+            width: 187px;
+            background-color: #d7d7db;
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+            border-left: 6px solid #4FA868;
+        }
+        .btn-icon {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #42a766;
+            padding: 4px;
+            left: 5px;
+            height: 35%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .btn-text {
+            display: inline-block;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: medium;
+            font-weight: bold;
+        }
